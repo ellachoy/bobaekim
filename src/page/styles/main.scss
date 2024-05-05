@@ -1,4 +1,10 @@
-.App {
+@use './mixins/breakpoint';
+@use './wrapper';
+@use './sections';
+@use './header';
+@use './typo';
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +41,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
