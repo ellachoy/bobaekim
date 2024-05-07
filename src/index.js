@@ -3,12 +3,28 @@ import ReactDOM from 'react-dom/client'
 import './index.scss'
 
 import reportWebVitals from './reportWebVitals'
-import Main from './page/main'
+import Main from './pages/main'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import NotFound from './pages/NotFound'
+import Introduce from './pages/Introduce'
+import Works from './pages/Works'
+import Contacts from './pages/Contacts'
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Main />,
+    errorElement: <NotFound />,
+  },
+  { path: '/Introduce', element: <Introduce /> },
+  { path: '/Works', element: <Works /> },
+  { path: '/Contacts', element: <Contacts /> },
+])
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
-    <Main />
+    {/* <Main /> */}
+    <RouterProvider router={router} />
   </React.StrictMode>
 )
 
