@@ -26,9 +26,7 @@ nav {
     color: black;
   }
 }
-$pencil-green: #4a153d;
-$pencil-dark: #232123;
-$body-bg: #f7f2f7;
+$line: #ae2a5e;
 
 .line {
   @keyframes line-animation {
@@ -37,15 +35,18 @@ $body-bg: #f7f2f7;
     }
 
     45% {
-      transform: scaleX(0.6);
+      transform: scaleX(0.2);
     }
 
-    55% {
-      transform: scaleX(0.6);
+    65% {
+      transform: scaleX(0.4);
+    }
+    85% {
+      transform: scaleX(0.8);
     }
 
     100% {
-      transform: scaleX(0.6);
+      transform: scaleX(1);
     }
   }
 
@@ -54,11 +55,12 @@ $body-bg: #f7f2f7;
   right: 0px;
   left: 0px;
   height: 1px;
-  width: 1250px;
+  min-width: 300px;
+  max-width: 1800px;
   z-index: -1;
-  border-radius: 50px;
-  background: $pencil-green;
+
+  background: $line;
   transform: scaleX(0);
   transform-origin: center;
-  animation: line-animation 10s ease-in-out;
+  animation: line-animation 5s infinite;
 }

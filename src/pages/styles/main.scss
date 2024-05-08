@@ -6,7 +6,10 @@
 @use './navigation';
 @use './links';
 @use './lists';
-@use './introduce'; /* .App {
+@use './introduce';
+@use './works';
+
+/* .App {
   text-align: center;
 }
 
