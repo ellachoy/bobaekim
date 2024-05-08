@@ -1,10 +1,63 @@
 nav {
-  // display: none;
-
+  padding-top: 56px;
+  opacity: 0;
+  animation: nav-animation 20s ease-in-out;
+  &.show-nav {
+    opacity: 1;
+    @keyframes nav-animation {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
   ul {
     display: flex;
     justify-content: flex-end;
     gap: 8px;
     text-align: center;
   }
+  a {
+    color: black;
+  }
+}
+$pencil-green: #4a153d;
+$pencil-dark: #232123;
+$body-bg: #f7f2f7;
+
+.line {
+  @keyframes line-animation {
+    20% {
+      transform: scaleX(0);
+    }
+
+    45% {
+      transform: scaleX(0.6);
+    }
+
+    55% {
+      transform: scaleX(0.6);
+    }
+
+    100% {
+      transform: scaleX(0.6);
+    }
+  }
+
+  position: relative;
+  top: 18px;
+  right: 100px;
+  height: 1px;
+  width: 1000px;
+  z-index: -1;
+  border-radius: 50px;
+  background: $pencil-green;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: line-animation 10s ease-in-out;
 }
