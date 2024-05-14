@@ -1,5 +1,6 @@
 import React from 'react'
 import foto1 from '../assets/5336.jpg'
+
 import Navigation from './components/Navigation'
 
 export default function Introduce() {
@@ -7,28 +8,22 @@ export default function Introduce() {
     <>
       <section className='section  wrapper'>
         <div className='introduce'>
-          <div className='intro-image'>
-            <img src={foto1} alt='' />
-          </div>
+          <image className='intro-image'>
+            <img src={foto1} alt='intro-foto' />
+          </image>
           <div>
-            <h2 className='h3'>Hello, iam Bobae Kim </h2>
+            <h2 className='h3'>Hello, i am Bobae Kim </h2>
             <blockquote>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat,
+              I enjoy looking at objects through other objects
             </blockquote>
-            <div style={{ 'margin-top': '88px' }}>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-              sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-              amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-              invidunt ut labore et dolore magna aliquyam erat, sed diam
-              voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-              Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-              dolor sit amet.
-            </div>
+            <p>
+              When I bid farewell to the person I loved most and received the
+              gift of being able to love someone else, my story began. I cherish
+              the moments when longing reveals purity and remember earnestly
+              when sorrow transforms into grace. I hope to have the strength to
+              offer my shoulder to someone unfamiliar with my story and to be
+              able to generously embrace each other's wounds at times!
+            </p>
           </div>
         </div>
 
