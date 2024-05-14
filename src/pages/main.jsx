@@ -6,7 +6,14 @@ export default function Main() {
   return (
     <section className='section wrapper'>
       <h1 className='h1 intro'>
-        <TypeIt>
+        <TypeIt
+          options={{
+            speed: 150,
+            waitUntilVisible: true,
+            cursor: false,
+            lifeLike: true,
+          }}
+        >
           <span className='intro-first'>BOBAE</span> KIM
         </TypeIt>
       </h1>
