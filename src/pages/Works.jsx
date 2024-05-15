@@ -4,7 +4,6 @@ import Data from './data/images'
 import Filter from './components/Filter'
 import ImageList from './components/ImageList'
 import Loading from './components/Loading'
-import Contact from './components/contact'
 
 export default function Works() {
   const [item, setItem] = useState(Data)
