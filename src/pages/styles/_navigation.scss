@@ -1,5 +1,4 @@
 nav {
-  //   background-color: rgba(21, 34, 43, 0.85);
   padding-top: 56px;
   opacity: 0;
   animation: nav-animation 20s ease-in-out;
@@ -24,7 +23,11 @@ nav {
     text-align: center;
   }
   a {
-    color: black;
+    font-size: clamp(18px, 2vw, 20px);
+    &.active {
+      color: #ae2a5e;
+    }
+    color: rgb(58, 13, 62);
   }
 }
 $line: #ae2a5e;

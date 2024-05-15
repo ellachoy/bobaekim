@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Navigation({ active }) {
   return (
@@ -7,16 +7,24 @@ export default function Navigation({ active }) {
       <nav className='wrapper show-nav'>
         <ul>
           <li>
-            <Link to='/'>Home</Link>
+            <NavLink to='/' activeClassName='active'>
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to='/Introduce'>Introduce</Link>
+            <NavLink to='/Introduce' activeClassName='active'>
+              Introduce
+            </NavLink>
           </li>
           <li>
-            <Link to='/Works'>Works</Link>
+            <NavLink to='/Works' activeClassName='active'>
+              Works
+            </NavLink>
           </li>
           <li>
-            <Link to='/Contacts'>Contacts</Link>
+            <NavLink to='/Contacts' activeClassName='active'>
+              Contacts
+            </NavLink>
           </li>
         </ul>
       </nav>
