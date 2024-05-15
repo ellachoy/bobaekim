@@ -8,9 +8,9 @@ export default function Introduce() {
     <>
       <section className='section  wrapper'>
         <div className='introduce'>
-          <image>
+          <div>
             <img src={artist} alt='artist-foto' />
-          </image>
+          </div>
           <div className='intro-block'>
             <h2 className='h3'>Hello, i am Bobae Kim </h2>
             <blockquote>
