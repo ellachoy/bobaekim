@@ -1,34 +1,46 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function Navigation({ active }) {
+export default function Navigation() {
   return (
     <>
       <nav className='wrapper show-nav'>
         <ul>
           <li>
-            <NavLink to='/' activeClassName='active'>
+            <NavLink
+              to='/'
+              className={({ isActive }) => (isActive ? 'active' : undefined)}
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to='/Introduce' activeClassName='active'>
+            <NavLink
+              to='/Introduce'
+              className={({ isActive }) => (isActive ? 'active' : undefined)}
+            >
               Introduce
             </NavLink>
           </li>
           <li>
-            <NavLink to='/Works' activeClassName='active'>
+            <NavLink
+              to='/Works'
+              className={({ isActive }) => (isActive ? 'active' : undefined)}
+            >
               Works
             </NavLink>
           </li>
           <li>
-            <NavLink to='/Contacts' activeClassName='active'>
+            <NavLink
+              to='/Contacts'
+              className={({ isActive }) => (isActive ? 'active' : undefined)}
+            >
               Contacts
             </NavLink>
           </li>
         </ul>
       </nav>
-      <div class='line'></div>
+      <div className='line'></div>
     </>
   )
 }
