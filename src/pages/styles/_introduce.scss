@@ -1,22 +1,23 @@
+@use './mixins/breakpoint' as breakpoint;
+
 .introduce {
-  display: flex;
-  justify-content: center;
+  color: rgb(62, 46, 73);
+  img {
+    width: 340px;
+    margin-bottom: 16px;
+  }
 
-  gap: 82px;
-
-  .intro-image {
-    height: auto;
-    img {
-      max-width: 400px;
-    }
+  .intro-block {
+    margin-top: 24px;
+    margin-bottom: 24px;
   }
 
   blockquote {
     color: darkgray;
     background: #f9f9f9;
     border-left: 6px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
+    margin: 2.5em 10px;
+    padding: 1.5em 10px;
     quotes: '\201C''\201D''\2018''\2019';
   }
   blockquote:before {
@@ -27,7 +28,10 @@
     margin-right: 0.25em;
     vertical-align: -0.4em;
   }
-  blockquote p {
-    display: inline;
+
+  @include breakpoint.medium-breakpoint {
+    display: flex;
+    justify-content: center;
+    gap: 82px;
   }
 }

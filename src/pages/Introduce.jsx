@@ -1,5 +1,5 @@
 import React from 'react'
-import foto1 from '../assets/5336.jpg'
+import artist from '../assets/artistFoto.jpeg'
 
 import Navigation from './components/Navigation'
 
@@ -8,10 +8,10 @@ export default function Introduce() {
     <>
       <section className='section  wrapper'>
         <div className='introduce'>
-          <image className='intro-image'>
-            <img src={foto1} alt='intro-foto' />
+          <image>
+            <img src={artist} alt='artist-foto' />
           </image>
-          <div>
+          <div className='intro-block'>
             <h2 className='h3'>Hello, i am Bobae Kim </h2>
             <blockquote>
               I enjoy looking at objects through other objects
