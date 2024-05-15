@@ -1,6 +1,5 @@
 import React from 'react'
 import artist from '../assets/artistFoto.jpeg'
-
 import Navigation from './components/Navigation'
 
 export default function Introduce() {
@@ -26,7 +25,6 @@ export default function Introduce() {
             </p>
           </div>
         </div>
-
         <Navigation />
       </section>
     </>

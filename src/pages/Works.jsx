@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react'
-
 import Navigation from './components/Navigation'
-import Images from './data/images'
-
+import Data from './data/images'
+import Filter from './components/Filter'
+import ImageList from './components/ImageList'
 import Loading from './components/Loading'
+import Contact from './components/contact'
 
 export default function Works() {
+  const [item, setItem] = useState(Data)
+  const menuItems = [...new Set(Data.map(Val => Val.category))]
+  const filterItem = curcat => {
+    const newItem = Data.filter(newVal => {
+      return newVal.category === curcat
+    })
+    setItem(newItem)
+  }
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -18,23 +27,12 @@ export default function Works() {
         <Loading loading={loading} />
       ) : (
         <section className='section works wrapper'>
-          <div className='image-filter'>
-            <ul>
-              <button>My Muse</button>
-              <button>Reflection</button>
-              <button>For Frinds</button>
-              <button>Glass Series </button>
-              <button>All</button>
-            </ul>
-          </div>
-          <div className='gallery'>
-            {Images.map(({ id, url }) => (
-              <div key={id}>
-                <img src={url} alt='arts' />
-              </div>
-            ))}
-          </div>
-
+          <Filter
+            filterItem={filterItem}
+            setItem={setItem}
+            menuItems={menuItems}
+          />
+          <ImageList item={item} />
           <Navigation />
         </section>
       )}

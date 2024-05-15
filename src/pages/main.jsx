@@ -17,7 +17,6 @@ export default function Main() {
           <span className='intro-first'>BOBAE</span> KIM
         </TypeIt>
       </h1>
-
       <Navigation />
     </section>
   )

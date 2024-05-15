@@ -1,0 +1,39 @@
+.contact-form {
+  color: #0000007a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    cursor: pointer;
+    width: clamp(14rem, 24vw, 36rem);
+    height: clamp(1.2rem, 3vw, 10rem);
+  }
+  textarea {
+    cursor: pointer;
+    width: clamp(14rem, 24vw, 36rem);
+    height: clamp(12rem, 10vw, 16rem);
+    margin-bottom: 26px;
+  }
+  form {
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+  }
+  label {
+    margin-right: 15px;
+  }
+  .submit-button {
+    width: clamp(14rem, 24vw, 36rem);
+    height: clamp(1.7rem, 3vw, 10rem);
+    color: var(--color-white);
+    background-color: var(--color-main);
+    transition: background-color 1.2s ease-in-out;
+    border: unset;
+    &:hover {
+      background-color: rgb(186, 186, 169);
+    }
+  }
+}
