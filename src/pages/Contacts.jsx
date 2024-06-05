@@ -1,44 +1,59 @@
-import React, { useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import React from 'react'
+import emailjs from 'emailjs-com'
 import Navigation from './components/Navigation'
 
+const SERVICE_ID = 'service_g99nnij'
+const TEMPLATE_ID = 'template_ekkusug'
+const PUBLIC_KEY = 'Yuh5lLivA0Ntu8EVi'
+
 export default function Contacts() {
-  const form = useRef()
-
-  const sendEmail = e => {
+  const handleOnSubmit = e => {
     e.preventDefault()
-
-    emailjs
-      .sendForm(
-        'service_g99nnij',
-
-        form.current,
-        'service_g99nnij'
-      )
-      .then(
-        result => {
-          console.log(result.text)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      result => {
+        console.log(result.text)
+        alert('Message Sent Successfully')
+      },
+      error => {
+        console.log(error.text)
+        alert('Something went wrong!')
+      }
+    )
+    e.target.reset()
   }
   return (
     <section className='section wrapper'>
       <div className='contact-form'>
-        <form ref={form} onSubmit={sendEmail}>
+        <form onSubmit={handleOnSubmit}>
           <div>
-            <label>Name</label>
-            <input type='text' name='user_name' />
+            <label for='from_name'>Name</label>
+            <input
+              type='text'
+              id='from_name'
+              name='from_name'
+              placeholder='Your name..'
+              required
+            />
           </div>
           <div>
-            <label>Email</label>
-            <input type='email' name='user_email' />
+            <label>E-mail</label>
+            <input
+              type='email'
+              id='from_email'
+              name='from_email'
+              placeholder='Your email..'
+              required
+            />
           </div>
           <div>
-            <label>Message</label>
-            <textarea name='message' />
+            <label for='message'>Message</label>
+            <textarea
+              name='message'
+              rows='8'
+              cols='30'
+              placeholder='Your message..'
+              required
+            />
           </div>
           <input type='submit' value='Send' className='submit-button' />
         </form>
