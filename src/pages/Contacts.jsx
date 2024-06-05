@@ -46,7 +46,7 @@ export default function Contacts() {
             />
           </div>
           <div>
-            <label for='message'>Message</label>
+            <label htmlFor='message'>Message</label>
             <textarea
               name='message'
               rows='8'
