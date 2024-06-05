@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
+    "@fancyapps/ui": "^5.0.36",
     "@react-email/link": "^0.0.8",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
