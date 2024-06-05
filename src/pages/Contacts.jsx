@@ -26,7 +26,7 @@ export default function Contacts() {
       <div className='contact-form'>
         <form onSubmit={handleOnSubmit}>
           <div>
-            <label for='from_name'>Name</label>
+            <label htmlFor='from_name'>Name</label>
             <input
               type='text'
               id='from_name'
