@@ -31,7 +31,7 @@ export default function Contacts() {
               type='text'
               id='from_name'
               name='from_name'
-              placeholder='Your name..'
+              placeholder=' Your name..'
               required
             />
           </div>
@@ -41,7 +41,7 @@ export default function Contacts() {
               type='email'
               id='from_email'
               name='from_email'
-              placeholder='Your email..'
+              placeholder=' Your email..'
               required
             />
           </div>
@@ -51,7 +51,7 @@ export default function Contacts() {
               name='message'
               rows='8'
               cols='30'
-              placeholder='Your message..'
+              placeholder=' Your message..'
               required
             />
           </div>
