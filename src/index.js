@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound'
 import Introduce from './pages/Introduce'
 import Works from './pages/Works'
 import Contacts from './pages/Contacts'
+import Media from './pages/components/media'
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Media></Media>
   </React.StrictMode>
 )
 

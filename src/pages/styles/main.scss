@@ -12,6 +12,9 @@
 @use './contact';
 @use './form';
 
+.media {
+  visibility: hidden;
+}
 /* .App {
   text-align: center;
 }
